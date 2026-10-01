@@ -1,3 +1,17 @@
+EXERCISE 1.1 OUTPUT:
+
 ROLL NAME MARKS
 101 Rahul 85
 102 Sneha 93
+
+EXERCISE 1.2 OUTPUT:
+
+85 Pass
+42 Fail
+76 Pass
+39 Fail
+92 Pass
+Total = 334
+Average = 66.8
+
+
