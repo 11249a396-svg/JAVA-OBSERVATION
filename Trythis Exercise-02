@@ -62,3 +62,19 @@ class Student {
         this.fee = fee;
     }
 }
+
+OUTPUTS:
+STUDENT FEE REPORT
+-------------------------------
+Name       Roll No    Fee
+-------------------------------
+Arun       101        15000.00
+Priya      102        18000.00
+
+Compiler error
+text
+error: Student is not public in com.scsvmv.fee.student;
+cannot be accessed from outside package
+import com.scsvmv.fee.student.Student;
+
+
