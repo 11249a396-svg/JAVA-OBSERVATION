@@ -1,0 +1,39 @@
+1. Payment.java
+interface Payment {
+    double getAmount();
+
+    default double getTotal() {
+        return getAmount();
+    }
+}
+
+2. UPI.java
+class UPI implements Payment {
+    public double getAmount() {
+        return 1000;
+    }
+}
+
+3. NetBanking.java
+class NetBanking implements Payment {
+    public double getAmount() {
+        return 1000 + 12;
+    }
+}
+
+4. Main.java
+public class Main {
+    public static void main(String[] args) {
+        Payment p1 = new UPI();
+        Payment p2 = new NetBanking();
+
+        System.out.println("UPI Total: Rs. " + p1.getTotal());
+        System.out.println("NetBanking Total: Rs. " + p2.getTotal());
+    }
+}
+
+
+OUTPUTS:
+text
+UPI Total: Rs. 1000.0
+NetBanking Total: Rs. 1012.0
