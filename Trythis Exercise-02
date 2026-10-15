@@ -1,0 +1,64 @@
+1. Student.java
+package com.scsvmv.fee.student;
+
+public class Student {
+    public String name;
+    public int rollNo;
+    public double fee;
+
+    public Student(String name, int rollNo, double fee) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.fee = fee;
+    }
+}
+
+
+2. FeeReport.java
+package com.scsvmv.fee.report;
+
+import com.scsvmv.fee.student.Student;
+
+public class FeeReport {
+    public static void printTable() {
+        Student s1 = new Student("Arun", 101, 15000);
+        Student s2 = new Student("Priya", 102, 18000);
+
+        System.out.println("STUDENT FEE REPORT");
+        System.out.println("-------------------------------");
+        System.out.printf("%-10s %-10s %s%n", "Name", "Roll No", "Fee");
+        System.out.println("-------------------------------");
+        System.out.printf("%-10s %-10d %.2f%n", s1.name, s1.rollNo, s1.fee);
+        System.out.printf("%-10s %-10d %.2f%n", s2.name, s2.rollNo, s2.fee);
+    }
+}
+
+
+3. FeeApp.java
+package com.scsvmv.fee.app;
+
+import com.scsvmv.fee.report.FeeReport;
+
+public class FeeApp {
+    public static void main(String[] args) {
+        FeeReport.printTable();
+    }
+}
+
+
+
+4. Remove public from Student
+java
+package com.scsvmv.fee.student;
+
+class Student {
+    public String name;
+    public int rollNo;
+    public double fee;
+
+    public Student(String name, int rollNo, double fee) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.fee = fee;
+    }
+}
